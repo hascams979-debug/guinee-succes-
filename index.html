@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guinée Succès & Deals - Éducation & Commerce</title>
+</head>
+<body>
+
+<script>
+    // =====================================================
+    // METS TON VRAI NUMERO WHATSAPP ICI (AVEC 224 DEVANT)
+    // =====================================================
+    const MON_NUMERO_WHATSAPP = "224627624789";
+</script>
+
+<style>
+    * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { margin: 0; padding: 0; background-color: #f0f4f8; color: #1a202c; }
+    
+    /* En-tête aux couleurs dynamiques */
+    header {
+        background: linear-gradient(135deg, #0b3d20 0%, #146c38 100%);
+        color: white; text-align: center; padding: 22px 15px;
+        border-bottom: 4px solid #f1c40f;
+    }
+    header h1 { margin: 0; font-size: 22px; text-transform: uppercase; letter-spacing: 0.5px; }
+    header p { margin: 6px 0 0; font-size: 13px; color: #e2e8f0; }
+
+    /* Boutons d'onglets (Éducation vs Commerce) */
+    .tabs {
+        display: flex; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        position: sticky; top: 0; z-index: 100;
+    }
+    .tab-btn {
+        flex: 1; padding: 14px 5px; text-align: center; font-weight: bold;
+        font-size: 14px; border: none; background: white; color: #4a5568;
+        border-bottom: 3px solid transparent; cursor: pointer;
+    }
+    .tab-btn.active {
+        color: #146c38; border-bottom: 3px solid #146c38; background: #f8fff9;
+    }
+
+    .container { max-width: 600px; margin: 0 auto; padding: 15px; }
+    .section { display: none; }
+    .section.active { display: block; }
+
+    /* Boîte de recherche Éducation */
+    .search-box {
+        background: white; padding: 18px; border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #f1c40f;
+        margin-bottom: 20px;
+    }
+    .search-box h2 { margin: 0 0 10px; font-size: 18px; color: #0b3d20; }
+    .search-box label { display: block; font-size: 13px; font-weight: bold; margin: 10px 0 5px; color: #2d3748; }
+    .search-box select, .search-box textarea {
+        width: 100%; padding: 12px; border: 1px solid #cbd5e0; border-radius: 8px;
+        font-size: 14px; background: #f8fafc;
+    }
+    .search-box textarea { height: 80px; resize: none; }
+
+    /* Cartes de produits et packs */
+    .card {
+        background: white; border-radius: 12px; padding: 16px; margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 5px solid #146c38;
+    }
+    .badge {
+        display: inline-block; background: #e6fffa; color: #0b3d20;
+        font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 15px; margin-bottom: 6px;
+    }
+    .card h3 { margin: 4px 0 8px; font-size: 16px; color: #1a202c; }
+    .card p { font-size: 13px; color: #4a5568; margin: 0 0 12px; line-height: 1.4; }
+    .price-row {
+        display: flex; justify-content: space-between; align-items: center;
+        background: #f7fafc; padding: 8px 12px; border-radius: 8px; margin-bottom: 12px;
+    }
+    .price { font-size: 16px; font-weight: bold; color: #e53e3e; }
+    .tag-ok { font-size: 12px; color: #2f855a; font-weight: bold; }
+
+    /* Boutons WhatsApp */
+    .btn-wa {
+        display: block; width: 100%; text-align: center; background: #25D366;
+        color: white; text-decoration: none; font-weight: bold; padding: 13px;
+        border-radius: 8px; font-size: 15px; border: none; cursor: pointer;
+        box-shadow: 0 3px 6px rgba(37,211,102,0.3);
+    }
+    .btn-gold {
+        background: #d69e2e; color: white; padding: 11px; border-radius: 8px;
+        text-decoration: none; display: block; text-align: center; font-weight: bold; font-size: 14px;
+    }
+    .vendeur-box {
+        background: #fffaf0; border: 1px solid #fbd38d; padding: 15px;
+        border-radius: 10px; margin-bottom: 18px; text-align: center;
+    }
+    footer { text-align: center; font-size: 12px; color: #718096; padding: 25px 10px; }
+</style>
+
+<header>
+    <h1>🇬🇳 GUINÉE ÉLITE SERVICE</h1>
+    <p>1er Portail d'Aide Scolaire, Sujets Corrigés & Bonnes Affaires</p>
+</header>
+
+<div class="tabs">
+    <button class="tab-btn active" onclick="changerOnglet('edu', this)">🎓 ÉDUCATION & SUJETS</button>
+    <button class="tab-btn" onclick="changerOnglet('com', this)">🛍️ COMMERCE & DEALS</button>
+</div>
+
+<div class="container">
+
+    <!-- ================= PÔLE 1 : ÉDUCATION ================= -->
+    <div id="edu" class="section active">
+        
+        <div class="search-box">
+            <h2>🔍 Commander un Sujet Traité ou Exposé</h2>
+            <p style="font-size:13px; color:#555; margin:0 0 10px;">
+                Bloqué sur un devoir, un ancien sujet d'examen ou un exposé ? Écris ton sujet ci-dessous et reçois le corrigé complet sur WhatsApp !
+            </p>
+            
+            <label>1. Choisis ton Niveau / Classe :</label>
+            <select id="classe_eleve">
+                <option value="Terminale SM (Sciences Maths)">Terminale SM (Bac)</option>
+                <option value="Terminale SE (Sciences Expérimentales)">Terminale SE (Bac)</option>
+                <option value="Terminale SS (Sciences Sociales)">Terminale SS (Bac)</option>
+                <option value="10ème Année (BEPC)">10ème Année (BEPC)</option>
+                <option value="Lycée (11ème / 12ème)">Lycée (11ème / 12ème)</option>
+                <option value="Université / Recherche / Exposé">Université / Exposé Complet</option>
+            </select>
+
+            <label>2. Écris la matière et le sujet exact de ta recherche :</label>
+            <textarea id="sujet_eleve" placeholder="Ex: Dissertation en Philo sur l'État, Exercice de Chimie organique, ou Anciens sujets corrigés de Maths..."></textarea>
+
+            <button class="btn-wa" style="margin-top:12px;" onclick="envoyerRechercheEducation()">
+                🟢 Recevoir mon Corrigé sur WhatsApp
+            </button>
+        </div>
+
+        <h3 style="color:#0b3d20; margin:20px 0 10px;">📚 Packs Examen Prêts (Téléchargement WhatsApp)</h3>
+
+        <div class="card">
+            <span class="badge">🎯 SPÉCIAL BACCALAURÉAT GUINÉE</span>
+            <h3>Pack Sujets Types Traités & Corrigés (SM / SE / SS)</h3>
+            <p>Les sujets incontournables avec corrigés détaillés étape par étape (Maths, Physique, Chimie, Biologie, Philo, Français, Histoire-Géo, Économie).</p>
+            <div class="price-row">
+                <span class="price">10 000 GNF</span>
+                <span class="tag-ok">⚡ Envoi Immédiat WhatsApp</span>
+            </div>
+            <button class="btn-wa" onclick="commanderPack('Pack Baccalauréat Sujets Corrigés', '10 000 GNF')">
+                🟢 Obtenir ce Pack sur WhatsApp
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">📘 SPÉCIAL BEPC (10ème ANNÉE)</span>
+            <h3>Annales & Sujets Corrigés BEPC Toutes Matières</h3>
+            <p>Prépare ton BEPC avec les meilleurs exercices résolus et résumés de cours faciles à retenir.</p>
+            <div class="price-row">
+                <span class="price">10 000 GNF</span>
+                <span class="tag-ok">⚡ Envoi Immédiat WhatsApp</span>
+            </div>
+            <button class="btn-wa" onclick="commanderPack('Pack BEPC 10ème Sujets Corrigés', '10 000 GNF')">
+                🟢 Obtenir ce Pack sur WhatsApp
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">🎓 EXPOSÉS & UNIVERSITÉ</span>
+            <h3>Rédaction Complète d'Exposé ou Devoir de Groupe</h3>
+            <p>Introduction, développement structuré, conclusion et explications claires pour avoir la meilleure note devant le professeur.</p>
+            <div class="price-row">
+                <span class="price">15 000 GNF</span>
+                <span class="tag-ok">✅ Sur Mesure</span>
+            </div>
+            <button class="btn-wa" onclick="commanderPack('Rédaction Exposé Complet sur Mesure', '15 000 GNF')">
+                🟢 Commander mon Exposé
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ================= PÔLE 2 : COMMERCE & AFFILIATION ================= -->
+    <div id="com" class="section">
+
+        <div class="vendeur-box">
+            <h4 style="margin:0 0 6px; color:#975a16;">🤝 Vous avez un article à vendre rapidement ?</h4>
+            <p style="font-size:12px; margin:0 0 10px; color:#744210;">
+                Téléphones, motos, terrains, solaire ou marchandises : publiez sur notre plateforme, nous vous trouvons l'acheteur !
+            </p>
+            <a href="#" class="btn-gold" onclick="contacterVendeur()">📢 Proposer ma marchandise</a>
+        </div>
+
+        <div class="card">
+            <span class="badge">📱 SMARTPHONES CERTIFIÉS</span>
+            <h3>iPhone & Samsung Galaxy (Occasion Propre & Neuf)</h3>
+            <p>Téléphones vérifiés, batterie excellente, débloqués tous réseaux. Dis-nous le modèle et ton budget sur WhatsApp !</p>
+            <div class="price-row">
+                <span class="price">Selon Modèle</span>
+                <span class="tag-ok">✅ Livraison Sûre</span>
+            </div>
+            <button class="btn-wa" onclick="commanderProduit('Achat Smartphone (iPhone / Samsung)')">
+                🟢 Demander les prix sur WhatsApp
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">☀️ ÉNERGIE SOLAIRE</span>
+            <h3>Kits Solaires Complets (Panneaux + Batteries + Convertisseurs)</h3>
+            <p>Solution idéale contre les coupures de courant pour maison et boutique (Télé, ventilateur, lumière, charge).</p>
+            <div class="price-row">
+                <span class="price">Sur Devis</span>
+                <span class="tag-ok">✅ Matériel Garanti</span>
+            </div>
+            <button class="btn-wa" onclick="commanderProduit('Kit Énergie Solaire')">
+                🟢 Commander / Se renseigner
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="badge">🌍 IMMOBILIER & MOTOS</span>
+            <h3>Parcelles de Terrain (Tanènè / Dubréka / Coyah) & Motos</h3>
+            <p>Terrains plats avec documents vérifiés et motos en parfait état de marche disponibles.</p>
+            <div class="price-row">
+                <span class="price">Opportunités</span>
+                <span class="tag-ok">✅ Visite Directe</span>
+            </div>
+            <button class="btn-wa" onclick="commanderProduit('Renseignement Terrain ou Moto')">
+                🟢 Contacter sur WhatsApp
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Guinée Élite Service — Paiement Sécurisé Orange Money & Livraison Rapide WhatsApp
+</footer>
+
+<script>
+    function changerOnglet(idSection, btnClique) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(idSection).classList.add('active');
+        btnClique.classList.add('active');
+    }
+
+    function ouvrirWhatsApp(texte) {
+        const num = MON_NUMERO_WHATSAPP.replace(/\+/g, '').replace(/\s+/g, '');
+        const url = "https://wa.me/" + num + "?text=" + encodeURIComponent(texte);
+        window.open(url, '_blank');
+    }
+
+    function envoyerRechercheEducation() {
+        const classe = document.getElementById('classe_eleve').value;
+        const sujet = document.getElementById('sujet_eleve').value.trim();
+        if (!sujet) {
+            alert("S'il te plaît, écris la matière ou le sujet de ta recherche dans la case !");
+            return;
+        }
+        const msg = "Bonjour ! Je viens de votre site Éducation.\n" +
+                    "🎓 *Ma Classe :* " + classe + "\n" +
+                    "📝 *Mon Sujet / Recherche :* " + sujet + "\n\n" +
+                    "Comment procéder pour recevoir le corrigé complet ?";
+        ouvrirWhatsApp(msg);
+    }
+
+    function commanderPack(nomPack, prix) {
+        const msg = "Bonjour ! Je veux commander le *" + nomPack + "* (" + prix + ") vu sur votre site. Voici mon contact pour l'envoi :";
+        ouvrirWhatsApp(msg);
+    }
+
+    function commanderProduit(nomProduit) {
+        const msg = "Bonjour ! Je suis intéressé par l'offre Commerce : *" + nomProduit + "* sur votre site. Pouvez-vous me donner les détails ?";
+        ouvrirWhatsApp(msg);
+    }
+
+    function contacterVendeur() {
+        const msg = "Bonjour ! Je suis commerçant/propriétaire et j'ai un article à faire vendre sur votre site contre commission. Voici les détails :";
+        ouvrirWhatsApp(msg);
+    }
+</script>
+
+</body>
+          </html>
